@@ -5,10 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ContattiComponent } from './contatti/contatti.component';
+import { PrenotaComponent } from './prenota/prenota.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ContattiComponent,
+    PrenotaComponent
   ],
   imports: [
     BrowserModule,
