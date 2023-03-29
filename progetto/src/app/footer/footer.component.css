@@ -1,0 +1,51 @@
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  
+    
+    text-align: center;
+    max-width: 100%;
+    display: block;
+    
+}
+
+
+img {
+    float: left;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    border: none;
+    display: block;
+
+}
+
+
+span {
+    float: left;
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+   
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+
+.btn{
+    background-color: #3366af;
+    position: absolute;
+    bottom: 60px;
+  
+ 
+  
+}
+
+.responsive {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
