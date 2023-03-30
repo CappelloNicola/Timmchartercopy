@@ -5,10 +5,11 @@
 
     .image {
     height:500px;
-    width:2000px;
+
     background-image: url('https://images6.alphacoders.com/427/427592.jpg');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     }
 
     .card {
@@ -49,6 +50,9 @@
     }
     .id{
     background-image: url('https://images6.alphacoders.com/427/427592.jpg');
-    background-repeat: repeat;
+
     height: 500px;
+    background-size: cover;
+   
+    background-repeat: no-repeat;
     }
