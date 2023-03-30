@@ -14,6 +14,7 @@ import { MatTableModule } from '@angular/material/table';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatDividerModule} from '@angular/material/divider';
 import { FAQComponent } from './components/faq/faq.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FAQComponent } from './components/faq/faq.component';
     FooterComponent,
     SliderComponent,
     ListinoPrezziComponent,
-    FAQComponent
+    FAQComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -34,6 +36,7 @@ import { FAQComponent } from './components/faq/faq.component';
     MatTableModule,
     MatGridListModule,
     MatDividerModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
