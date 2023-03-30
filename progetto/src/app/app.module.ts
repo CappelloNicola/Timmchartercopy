@@ -5,16 +5,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PrenotaComponent } from './prenota/prenota.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PrenotaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
