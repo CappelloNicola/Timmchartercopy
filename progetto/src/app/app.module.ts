@@ -8,6 +8,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Map1Component } from './components/map1/map1.component';
 import { Map2Component } from './components/map2/map2.component';
 import {MatStepperModule} from '@angular/material/stepper';
+import {MatIconModule} from '@angular/material/icon';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import {MatStepperModule} from '@angular/material/stepper';
     AppRoutingModule,
     NgbModule,
     BrowserAnimationsModule,
-    MatStepperModule
+    MatStepperModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
