@@ -22,7 +22,8 @@ import { Map1Component } from './components/map1/map1.component';
 import { Map2Component } from './components/map2/map2.component';
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatIconModule} from '@angular/material/icon';
-
+import { CookieComponent } from './components/cookie/cookie.component';
+import { PortoComponent } from './components/porto/porto.component';
 
 
 @NgModule({
@@ -37,7 +38,9 @@ import {MatIconModule} from '@angular/material/icon';
     ContattiComponent,
     PrenotaComponent,
     Map1Component,
-    Map2Component
+    Map2Component,
+    CookieComponent,
+    PortoComponent
   ],
   imports: [
     BrowserModule,

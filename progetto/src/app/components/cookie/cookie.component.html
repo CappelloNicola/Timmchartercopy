@@ -1,0 +1,23 @@
+<div class="position-fixed top-0 end-0 cookie-window-top" id="hideable-div" *ngIf="showCookiePopup">
+  <p class="text-cookie-w-t">
+    Comunicazione ai sensi dir. 2009/136/CE: questo sito utilizza cookies tecnici anche di terze parti.
+    L'uso del sito costituisce accettazione implicita dell'uso dei cookies.
+    Per revocare il consenso è sufficiente cancellare i cookies di dominio dal browser.
+  </p>
+  <div class="cookie-accept">
+      <a class="cookie-accept-button" role="button" (click)="hideCookiePopup()" #hideButton>Accetto</a>
+  </div>
+</div>
+<div class="fixed-bottom bg-light border-top" [ngStyle]="{ display: showReservation ? 'block' : 'none' }" *ngIf="showCookiePopupF">
+  <div class="cookie-window-bottom">
+    <div class="col-lg col-sm">
+      <p class="cookie-text">Richiedi un Preventivo con un click!</p>
+    </div>
+    <div class="col-lg 1 col-sm 12 mx-5">
+      <div class="mx-5">
+        <button class="button-prenota" routerLink="/Prenota" (click)="hideCookiePopupF()">PRENOTA</button>
+        <button class="button-prenota-no" (click)="hideCookiePopupF()">NO, GRAZIE</button>
+      </div>
+    </div>
+  </div>
+</div>
