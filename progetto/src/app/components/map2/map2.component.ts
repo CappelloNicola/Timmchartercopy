@@ -2,6 +2,7 @@ import { Component, AfterViewInit  } from '@angular/core';
 import * as L from 'leaflet';
 import 'leaflet-routing-machine';
 
+
 @Component({
   selector: 'app-map2',
   templateUrl: './map2.component.html',
@@ -9,6 +10,8 @@ import 'leaflet-routing-machine';
 })
 export class Map2Component implements AfterViewInit {
   private map:any;
+
+  
 
   private initMap(): void {
     this.map = L.map('map', {
@@ -24,9 +27,29 @@ export class Map2Component implements AfterViewInit {
     tiles.addTo(this.map);
   }
 
+  
+
   constructor() { }
 
   ngAfterViewInit(): void {
+    
     this.initMap();
+
+    let routing = L.Routing.control({
+      waypoints: [
+          L.latLng(57.74, 11.94),
+          L.latLng(57.6792, 11.949)
+      ],
+      routeWhileDragging: true
+  });
+
+  routing.addTo(this.map);
+  // this.map.removeControl(routing)
+
   }
+
+
+
+
+  
 }
