@@ -16,17 +16,18 @@
           Per richiedere informazioni puoi contattarci compilando il modulo online sotto indicato
         </p>
         <br>
+        <form [formGroup]="mioform" (ngSubmit)="onSubmit()">
         <div class="row d-flex justify-content-center">
           <div class="col-4">
             <div class="form-group">
               <label class="h6 text-secondary">Nome*</label>
-              <input type="text" class="form-control" id="" placeholder="Nome*">
+              <input type="text" class="form-control" formControlName="name" id="" placeholder="Nome*">
             </div>
           </div>
           <div class="col-4">
             <div class="form-group">
               <label class="h6 text-secondary">Cognome*</label>
-              <input type="text" class="form-control" id="" placeholder="Cognome*">
+              <input type="text" class="form-control" formControlName="surname" id="" placeholder="Cognome*">
             </div>
           </div>
         </div>
@@ -35,13 +36,13 @@
           <div class="col-4">
             <div class="form-group">
               <label class="h6 text-secondary">Email*</label>
-              <input type="email" class="form-control" id="" placeholder="name@example.it">
+              <input type="email" class="form-control" formControlName="email" id="" placeholder="name@example.it">
             </div>
           </div>
           <div class="col-4">
             <div class="form-group">
               <label class="h6 text-secondary">Telefono*</label>
-              <input type="text" class="form-control" id="" placeholder="Numero di telefono">
+              <input type="text" class="form-control" formControlName="telefono" id="" placeholder="Numero di telefono">
             </div>
           </div>
         </div>
@@ -60,11 +61,11 @@
               sulla privacy</a>, inoltre:
           </span>
           <div class="form-check mt-1 col-8 justify-content-center">
-            <input type="radio" id="acconsento" class="h6 form-check-input text-secondary">
+            <input type="radio" name="scelta" id="acconsento" class="h6 form-check-input text-secondary">
             <label for="acconsento" class="h6 form-check-label text-secondary"><b>Acconsento</b></label>
           </div>
           <div class="form-check  col-8 justify-content-center">
-            <input type="radio" id="non" class="h6 form-check-input text-secondary">
+            <input type="radio" id="non" name="scelta" class="h6 form-check-input text-secondary">
             <label for="non" class="h6 form-check-label text-secondary"> Non Acconsento</label>
           </div>
           <div class="col-8 justify-content-center">
@@ -78,10 +79,38 @@
         <div class="row">
           <div class=" justify-content-center d-flex p1 mt-4 mb-1">
             <button type="submit" class="btn text-white"
-              style="background-color: rgb(70, 97, 151); font-size: 20px;">Invia</button>
+              style="background-color: rgb(70, 97, 151); font-size: 20px;" (click)="open(content)">Invia</button>
           </div>
         </div>
+      </form>
       </div>
     </div>
   </div>
+
+<!--Modale-->
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h1 class="modal-title" id="modal-basic-title">Dati</h1>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="mb-3">
+        <h2>Dati Inseriti</h2>
+          <p><strong>Nome:</strong> {{ datiForm.name }}</p> <br>
+          <p><strong>Cognome:</strong> {{ datiForm.surname }}</p> <br>
+          <p><strong>Email:</strong> {{ datiForm.email }}</p> <br>
+          <p><strong>Telefono:</strong> {{ datiForm.telefono }}</p> <br>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+  </div>
+</ng-template>
+<hr />
+<pre>{{ closeResult }}</pre>
+<!---Modal-->
+
 </div>
