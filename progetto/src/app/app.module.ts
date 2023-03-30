@@ -15,6 +15,10 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatDividerModule} from '@angular/material/divider';
 import { FAQComponent } from './components/faq/faq.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { ContattiComponent } from './contatti/contatti.component';
+import { PrenotaComponent } from './prenota/prenota.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +28,9 @@ import { NavbarComponent } from './navbar/navbar.component';
     SliderComponent,
     ListinoPrezziComponent,
     FAQComponent,
-    NavbarComponent
+    NavbarComponent,
+    ContattiComponent,
+    PrenotaComponent
   ],
   imports: [
     BrowserModule,
@@ -35,8 +41,9 @@ import { NavbarComponent } from './navbar/navbar.component';
     MatExpansionModule,
     MatTableModule,
     MatGridListModule,
-    MatDividerModule
-
+    MatDividerModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
