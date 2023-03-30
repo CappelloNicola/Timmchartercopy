@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SliderComponent } from './components/slider/slider.component';
 
 import { DotazioniServiziComponent } from './components/dotazioni-servizi/dotazioni-servizi.component';
 
@@ -16,7 +17,8 @@ import { FooterComponent } from './footer/footer.component';
   declarations: [
     AppComponent,
     DotazioniServiziComponent,
-    FooterComponent
+    FooterComponent,
+    SliderComponent
 
   ],
   imports: [
