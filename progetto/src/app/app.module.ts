@@ -13,16 +13,16 @@ import { ListinoPrezziComponent } from './components/listino-prezzi/listino-prez
 import { MatTableModule } from '@angular/material/table';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatDividerModule} from '@angular/material/divider';
+import { FAQComponent } from './components/faq/faq.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-
     DotazioniServiziComponent,
     FooterComponent,
     SliderComponent,
-    ListinoPrezziComponent
-
+    ListinoPrezziComponent,
+    FAQComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +34,6 @@ import {MatDividerModule} from '@angular/material/divider';
     MatTableModule,
     MatGridListModule,
     MatDividerModule
-
   ],
   providers: [],
   bootstrap: [AppComponent]
