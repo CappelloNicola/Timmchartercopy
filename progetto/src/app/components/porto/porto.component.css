@@ -1,0 +1,28 @@
+.titol-chi-siamo{
+  font-size: 45px;
+  margin: 29px;
+  text-align: center;
+  font-family: Gilda Display !important;
+  color: #466197 !important;
+  font-weight: 400 !important;
+  line-height: 48px !important;
+}
+
+.responsive{
+  border-radius: 15px;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  height: 100%;
+}
+
+.line-color{
+  background-color: #72A2B4; width: 100%; height: 2px;
+}
+
+.text-secondary{
+  color: #16557f !important;
+  font-family: Gilda Display !important;
+  font-weight: unset !important;
+  font-size: 20px !important;
+}
