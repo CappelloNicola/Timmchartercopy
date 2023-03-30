@@ -2,15 +2,15 @@
     position: relative;
     color: #466197;
     }
-    
+
     .image {
-    height:300px;
+    height:500px;
     width:2000px;
     background-image: url('https://images6.alphacoders.com/427/427592.jpg');
     background-size: cover;
     background-position: center;
     }
-    
+
     .card {
     position: absolute;
     top: 200px;
@@ -18,13 +18,13 @@
     transform: translateX(-50%);
     width: 80%;
     max-width: 800px;
-   
+
     }
     .text-center {
         text-align: center;
       }
       mat-panel-title{
-        color: #466197; 
+        color: #466197;
         font-family: Gilda Display !important;
         font-weight: unset !important;
         font-size: 20px !important;
@@ -33,7 +33,7 @@
 
 
     mat-card-content{
-    color: #466197; 
+    color: #466197;
     font-family: Gilda Display !important;
     font-weight: unset !important;
     font-size: 20px !important;

@@ -9,13 +9,13 @@
       <div class="collapse navbar-collapse  justify-content-between" id="navbarNavDropdown"  >
         <ul class="navbar-nav ">
           <li class="nav-item ">
-            <a class="nav-link activemt-2  mt-2  mb-2 ms-5 me-1" aria-current="page">Chi siamo</a>
+            <a routerLink="/" class="nav-link activemt-2  mt-2  mb-2 ms-5 me-1" aria-current="page">Chi siamo</a>
           </li>
           <li class="nav-item">
             <a class="nav-link mt-2  mb-2 ms-3 me-1">Scopri la barca</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link mt-2  mb-2 ms-3 me-1">Dotazioni e servizi</a>
+            <a routerLink="/servizi" class="nav-link mt-2  mb-2 ms-3 me-1">Dotazioni e servizi</a>
           </li>
           <li class="nav-item">
             <a class="nav-link mt-2  mb-2 ms-3 me-1">Porto</a>
@@ -31,20 +31,20 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link mt-2  mb-2 ms-3 me-1">Listino prezzi</a>
+            <a routerLink="/prezzi" class="nav-link mt-2  mb-2 ms-3 me-1">Listino prezzi</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link mt-2  mb-2 ms-3 me-1  ">Domande frequenti</a>
+            <a routerLink="/faq" class="nav-link mt-2  mb-2 ms-3 me-1  ">Domande frequenti</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link mt-2  mb-2 ms-3 me-5 ">Contatti</a>
+            <a routerLink="/contatti" class="nav-link mt-2  mb-2 ms-3 me-5 ">Contatti</a>
           </li>
-    
+
         </ul>
-        <button class="btn btn-primary m-2 ms-5 me-5 " id="prenota" >PRENOTA</button>
+        <button [routerLink]="['/prenota']" class="btn btn-primary m-2 ms-5 me-5 " id="prenota" >PRENOTA</button>
       </div>
     </div>
   </nav>
 
 
-  
+

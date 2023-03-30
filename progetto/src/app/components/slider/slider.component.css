@@ -1,6 +1,9 @@
 .immagine {
     width: 100%;
-    
-    
+
+
   }
-  
+
+#containerSlider{
+  margin-top:100px;
+}

@@ -1,6 +1,7 @@
 .id{
   background-image: url('https://images6.alphacoders.com/427/427592.jpg');
-  background-repeat: repeat;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 500px;
   }
   #img{

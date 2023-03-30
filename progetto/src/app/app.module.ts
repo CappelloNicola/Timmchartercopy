@@ -24,6 +24,7 @@ import {MatStepperModule} from '@angular/material/stepper';
 import {MatIconModule} from '@angular/material/icon';
 import { CookieComponent } from './components/cookie/cookie.component';
 import { PortoComponent } from './components/porto/porto.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { PortoComponent } from './components/porto/porto.component';
     Map1Component,
     Map2Component,
     CookieComponent,
-    PortoComponent
+    PortoComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
