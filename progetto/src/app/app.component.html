@@ -16,15 +16,15 @@
         <a class="cookie-accept-button" role="button" (click)="hideCookiePopup()" #hideButton>Accetto</a>
     </div>
   </div>
-  <div class="fixed-bottom bg-light border-top" [ngStyle]="{ display: showReservation ? 'block' : 'none' }">
+  <div class="fixed-bottom bg-light border-top" [ngStyle]="{ display: showReservation ? 'block' : 'none' }" *ngIf="showCookiePopupF">
     <div class="cookie-window-bottom">
       <div class="col-lg col-sm">
         <p class="cookie-text">Richiedi un Preventivo con un click!</p>
       </div>
       <div class="col-lg 1 col-sm 12 mx-5">
         <div class="mx-5">
-          <button class="button-prenota">PRENOTA</button>
-          <button class="button-prenota-no">NO, GRAZIE</button>
+          <button class="button-prenota" routerLink="/Prenota" (click)="hideCookiePopupF()">PRENOTA</button>
+          <button class="button-prenota-no" (click)="hideCookiePopupF()">NO, GRAZIE</button>
         </div>
       </div>
     </div>

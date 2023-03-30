@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CookieComponent } from './components/cookie/cookie.component';
+import { PortoComponent } from './components/porto/porto.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CookieComponent
+    CookieComponent,
+    PortoComponent
   ],
   imports: [
     BrowserModule,
