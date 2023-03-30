@@ -18,6 +18,12 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ContattiComponent } from './contatti/contatti.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PrenotaComponent } from './prenota/prenota.component';
+import { Map1Component } from './components/map1/map1.component';
+import { Map2Component } from './components/map2/map2.component';
+import {MatStepperModule} from '@angular/material/stepper';
+import {MatIconModule} from '@angular/material/icon';
+
+
 
 @NgModule({
   declarations: [
@@ -29,7 +35,9 @@ import { PrenotaComponent } from './prenota/prenota.component';
     FAQComponent,
     NavbarComponent,
     ContattiComponent,
-    PrenotaComponent
+    PrenotaComponent,
+    Map1Component,
+    Map2Component
   ],
   imports: [
     BrowserModule,
@@ -42,7 +50,9 @@ import { PrenotaComponent } from './prenota/prenota.component';
     MatGridListModule,
     MatDividerModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatStepperModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
