@@ -1,91 +1,127 @@
-<div id="id">
+<div class="id">
   <div class="container">
-    <div class="d-flex justify-content-center">
-      <div class="border-bottom-0 shadow p-3  rounded bg-body border-bottom-0 w-75">
+    <div class="d-flex justify-content-center ">
+      <div id="img" class="border-bottom-0 shadow p-3  rounded bg-body border-bottom-0 w-75">
         <div class="row">
           <div class="col-12">
-            <h1 style="color:rgb(70, 97, 151); font-size: 45px;" class="text-center">Richiedi un preventivo gratuito
-            </h1>
+            <h1 style="color:rgb(70, 97, 151); font-size: 45px;" class="text-center mt-5">Richiedi un preventivo
+              gratuito</h1>
           </div>
         </div>
-        <div class="col-12">
-          <div class="text-center d-flex justify-content-center mt-3">
-            <p class="h6 text-center text-secondary d-flex">Parla con un nostro esperto per organizzare la tua vacanza
-              in
-              barca! Verrai ricontattato entro 24 ore. <br> Prenotazioni gratuite e flessibili. </p>
+        <div class="row">
+          <div class="col-12">
+            <div class=" mt-3 d-flex justify-content-center">
+              <p class="h6 text-center text-secondary" style="color:rgb(70, 97, 151)">Parla con un nostro esperto per
+                organizzare la tua vacanza in barca! Verrai ricontattato entro 24 ore.
+                <br>
+                Prenotazioni gratuite e flessibili
+              </p>
+            </div>
           </div>
           <p class="mb-3 pt-2 h6 text-center text-secondary">
             Per richiedere informazioni puoi contattarci compilando il modulo online sotto indicato
           </p>
           <br>
-          <div class="row d-flex justify-content-center">
-            <div class="col-4">
-              <div class="form-group">
-                <label class="h6 text-secondary">Nome*</label>
-                <input type="text" class="form-control" id="" placeholder="Nome*">
+          <form [formGroup]="mioform" (ngSubmit)="onSubmit()">
+            <div class="row d-flex justify-content-center">
+              <div class="col-8 mt-2">
+                <div class="form-group">
+                  <label class="h6 text-secondary">Nome e Cognome*</label>
+                  <input type="text" class="form-control" formControlName="name" placeholder="Nome e Cognome*">
+                </div>
+              </div>
+              <div class="col-8 mt-2">
+                <div class="form-group">
+                  <label class="h6 text-secondary">Email*</label>
+                  <input type="text" class="form-control" formControlName="email" placeholder="Email*">
+                </div>
+              </div>
+              <div class="col-8 mt-2">
+                <div class="form-group">
+                  <label class="h6 text-secondary">Telefono*</label>
+                  <input type="text" class="form-control" formControlName="telefono" placeholder="+379...">
+                </div>
               </div>
             </div>
-            <div class="col-4">
-              <div class="form-group">
-                <label class="h6 text-secondary">Cognome*</label>
-                <input type="text" class="form-control" id="" placeholder="Cognome*">
+            <br>
+            <div class="row d-flex justify-content-center">
+              <div class="col-8 mt-2">
+                <div class="form-group">
+                  <label class="h6 text-secondary" for="dove">Dove vuoi viaggiare*</label>
+                  <select id="dove" class="form-select" formControlName="location">
+                    <option select hidden></option>
+                    <option value="Costiera Amalfitana">Costiera Amalfitana</option>
+                    <option value="Isole Eolie">Isole Eolie</option>
+                    <option value="Isole del Golfo">Isole del Golfo</option>
+                  </select>
+                </div>
               </div>
             </div>
-          </div>
-          <br>
-          <div class="row d-flex justify-content-center">
-            <div class="col-4">
-              <div class="form-group">
-                <label class="h6 text-secondary">Email*</label>
-                <input type="email" class="form-control" id="" placeholder="name@example.it">
+            <br>
+            <div class="row d-flex justify-content-center">
+              <div class="col-8 mt-2">
+                <div class="form-group">
+                  <label class="h6 text-secondary">Il tuo messaggio</label>
+                  <textarea class="form-control" rows="3"></textarea>
+                </div>
               </div>
             </div>
-            <div class="col-4">
-              <div class="form-group">
-                <label class="h6 text-secondary">Telefono*</label>
-                <input type="text" class="form-control" id="" placeholder="Numero di telefono">
+            <div class="row justify-content-center mt-2">
+              <span class="col-8 h6 d-flex mt-3 text-secondary"> Ho letto e accetto &nbsp; <a
+                  routerLink="/privacy">l'informativa
+                  sulla privacy</a>, inoltre:
+              </span>
+              <div class="form-check mt-1 col-8 justify-content-center">
+                <input type="radio" id="acconsento" name="scelta" class="h6 form-check-input text-secondary">
+                <label for="acconsento" class="h6 form-check-label text-secondary"><b>Acconsento</b></label>
+              </div>
+              <div class="form-check  col-8 justify-content-center">
+                <input type="radio" id="non" name="scelta" class="h6 form-check-input text-secondary">
+                <label for="non" class="h6 form-check-label text-secondary"> Non Acconsento</label>
+              </div>
+              <div class="col-8 justify-content-center">
+                <p class="h6 text-secondary">
+                  TIMM Charter di utilizzare il mio indirizzo e-mail per l'invio delle principali comunicazione
+                  commerciali
+                  su
+                  prodotti,servizi e inviti a eventi
+                </p>
               </div>
             </div>
-          </div>
-          <br>
-          <div class="row d-flex justify-content-center">
-            <div class="col-8">
-              <div class="form-group">
-                <label class="h6 text-secondary">Messaggio</label>
-                <textarea class="form-control" rows="4"></textarea>
+            <div class="row">
+              <div class=" justify-content-center d-flex p1 mt-4 mb-1">
+                <button type="submit" class="btn text-white"
+                  style="background-color: rgb(70, 97, 151); font-size: 20px;" (click)="open(content)">Invia</button>
               </div>
             </div>
-          </div>
-          <div class="row justify-content-center mt-2">
-            <span class="col-8 h6 d-flex mt-3 text-secondary"> Ho letto e accetto &nbsp; <a
-                routerLink="/privacy">l'informativa
-                sulla privacy</a>, inoltre:
-            </span>
-            <div class="form-check mt-1 col-8 justify-content-center">
-              <input type="radio" id="acconsento" class="h6 form-check-input text-secondary">
-              <label for="acconsento" class="h6 form-check-label text-secondary"><b>Acconsento</b></label>
-            </div>
-            <div class="form-check  col-8 justify-content-center">
-              <input type="radio" id="non" class="h6 form-check-input text-secondary">
-              <label for="non" class="h6 form-check-label text-secondary"> Non Acconsento</label>
-            </div>
-            <div class="col-8 justify-content-center">
-              <p class="h6 text-secondary">
-                TIMM Charter di utilizzare il mio indirizzo e-mail per l'invio delle principali comunicazione
-                commerciali
-                su
-                prodotti,servizi e inviti a eventi
-              </p>
-            </div>
-          </div>
-          <div class="row">
-            <div class=" justify-content-center d-flex p1 mt-4 mb-1">
-              <button type="submit" class="btn text-white"
-                style="background-color: rgb(70, 97, 151); font-size: 20px;">Invia</button>
-            </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>
   </div>
+
+  <!---Modal-->
+  <ng-template #content let-modal>
+    <div class="modal-header">
+      <h1 class="modal-title" id="modal-basic-title">Dati</h1>
+      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body">
+      <form>
+        <div class="mb-3">
+          <h2>Dati Inseriti</h2>
+            <p><strong>Nome e Cognome:</strong> {{ datiForm.name }}</p> <br>
+            <p><strong>Email:</strong> {{ datiForm.email }}</p> <br>
+            <p><strong>Telefono:</strong> {{ datiForm.telefono }}</p> <br>
+            <p><strong>Dove vuoi viaggiare:</strong> {{ datiForm.location }}</p> <br>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+    </div>
+  </ng-template>
+  <hr />
+  <pre>{{ closeResult }}</pre>
+  <!---Modal-->
 </div>
