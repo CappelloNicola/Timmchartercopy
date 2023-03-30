@@ -23,6 +23,6 @@ export class CookieComponent {
   ngOnInit() {
     setTimeout(() => {
       this.showReservation = true;
-    }, 50);
+    }, 10000);
   }
 }
