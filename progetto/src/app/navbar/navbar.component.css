@@ -2,12 +2,21 @@
     
     color: #3366af !important;
     font-size: 15px;
+    font-family: 'Gilda Display' !important; 
     
 }
+
 
 #prenota{
     background: #3366af;
     border-radius: 10px;
     display: inline-block;
 }
+
+
+
+
+.dropdown-menu > li > a:focus {
+    background-color: initial; 
+  }
 
