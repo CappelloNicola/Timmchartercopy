@@ -1,0 +1,74 @@
+<div class="id">
+        <br><br><br><br><br><br><br><br>
+        <div class="card">
+            <mat-card>
+                <mat-card-title class="text-center">LISTINO PREZZI</mat-card-title>
+                <mat-card-content>
+                    <mat-accordion>
+                        <table mat-table [dataSource]="dataSource" class="mat-elevation-z0">
+                            <ng-container matColumnDef="periodo1">
+                              <td mat-cell *matCellDef="let element"> {{element.periodo1}} </td>
+                            </ng-container>
+                            <ng-container matColumnDef="periodo2">
+                              <td mat-cell *matCellDef="let element"> {{element.periodo2}} </td>
+                            </ng-container>
+                            <ng-container matColumnDef="periodo3">
+                              <td mat-cell *matCellDef="let element"> {{element.periodo3}} </td>
+                            </ng-container>
+                            <ng-container matColumnDef="periodo4">
+                              <td mat-cell *matCellDef="let element"> {{element.periodo4}} </td>
+                            </ng-container>
+                            <ng-container matColumnDef="periodo5">
+                                <td mat-cell *matCellDef="let element"> {{element.periodo5}} </td>
+                            </ng-container>
+                            <ng-container matColumnDef="periodo6">
+                                <td mat-cell *matCellDef="let element"> {{element.periodo6}} </td>
+                            </ng-container>
+                            <ng-container matColumnDef="periodo7">
+                                <td mat-cell *matCellDef="let element"> {{element.periodo7}} </td>
+                            </ng-container>
+                            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                          </table>
+                    </mat-accordion>
+                    <br>
+                    <p id="Costi">* I costi sono riferiti ad una settimana</p>
+                    <br>
+                    <p id="Tariffe">LE TARIFFE INCLUDONO</p>
+                    <br>
+                    <mat-grid-list cols="2" rowHeight="160px">
+                        <mat-grid-tile>
+                          <div class="box1">
+                            <p>IVA, Assicurazione RC e CASCO</p>
+                            <mat-divider></mat-divider>
+                            <p>Pilota automatico</p>
+                            <mat-divider></mat-divider>
+                            <p>Stoviglie, biancheria da letto e toilette</p>
+                            <mat-divider></mat-divider>
+                            <p>Sosta nella marina la prima e l'ultima notte</p>
+                            <mat-divider></mat-divider>
+                          </div>
+                        </mat-grid-tile>
+                        <mat-grid-tile>
+                          <div class="box2">
+                            <p>Tender con fuoribordo</p>
+                            <mat-divider></mat-divider>
+                            <p>Pieno di acqua e gas</p>
+                            <mat-divider></mat-divider>
+                            <p>Cuscini e coperte</p>
+                            <mat-divider></mat-divider>
+                            <p>Dotazioni previste nelle schede delle barche</p>
+                            <mat-divider></mat-divider>
+                          </div>
+                        </mat-grid-tile>
+                      </mat-grid-list>
+                </mat-card-content>
+            </mat-card>
+           
+        </div>
+ <br><br><br>
+</div>
+
+
+
+
+ 
