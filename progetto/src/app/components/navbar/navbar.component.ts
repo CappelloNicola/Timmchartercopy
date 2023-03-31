@@ -16,5 +16,10 @@ export class NavbarComponent {
     this.scroller.scrollToPosition([0, porto])
   }
 
+  scrollToChisiamo(){
+    const chiSiamo:any = document.getElementById('chiSiamo')?.offsetTop;
+    this.scroller.scrollToPosition([0, chiSiamo])
+  }
+
   }
 
